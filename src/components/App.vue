@@ -47,9 +47,10 @@
     watch: {
       todos: {
         deep:true,//深度监视
-        handler: function (val) {//todos发生了变化
+        /*handler: function (val) {//todos发生了变化
           LocalStorageUtil.saveTodos(val);//保存todos
-        }
+        }*/
+        handler:LocalStorageUtil.saveTodos
       }
     },
     components:{
